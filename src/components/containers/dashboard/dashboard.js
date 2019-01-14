@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import './dashboard.css'
+
 import Movies from '../content/Movies/Movies'
 
 class Dashboard extends Component{  
@@ -12,8 +13,6 @@ class Dashboard extends Component{
                 <Movies/>
             </div>
         )
-
-        
     }
 }
 
