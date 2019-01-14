@@ -1,17 +1,17 @@
 import React, {Component} from 'react'
 
-class Dashboard extends Component{  
+class TV extends Component{  
     state = {   
 
     }
 
     render(){   
         return( 
-            <div className='sideBar'>   
+            <div className='TV'>   
                 
             </div>
         )
     }
 }
 
-export default Dashboard
+export default TV

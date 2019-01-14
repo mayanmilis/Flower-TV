@@ -1,0 +1,12 @@
+.Movie{
+    width: 300px;
+    height: 300px;
+    float: left;
+    border: 2px solid black;
+    background-size: cover;
+    background-position: center;
+}
+
+.Movie:hover{
+    background-color: rgba(0, 0, 0, 0.103);
+}
