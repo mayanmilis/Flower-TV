@@ -1,12 +1,77 @@
+.Container{ 
+    width: 100%;
+    height: 650px;;
+}
+
+.AllMovies{
+    color:white;
+    font-size: 15px;
+    top:830px;
+    padding-left: 40px;
+    font-size: 20px;
+    font-weight: 500;
+    position: absolute;
+    cursor: pointer;
+    
+}
+
 .Movie{
+    position: relative;
     width: 300px;
     height: 300px;
     float: left;
-    border: 2px solid black;
     background-size: cover;
     background-position: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
+
 }
 
-.Movie:hover{
-    background-color: rgba(0, 0, 0, 0.103);
+.Fade:hover{
+    
+    width: 300px;
+    height: 300px;
+    background-color: rgba(0, 0, 0, 0.616);
+    transition-duration: 300ms;
+    cursor: pointer;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
+}
+
+.Title{ 
+    width: 300px;
+    height: 300px;
+    color: white;
+    padding-top:150px; 
+    padding-left: 3px;
+    text-shadow: -2px 0 rgba(0, 0, 0, 0.294), 0 2px rgba(0, 0, 0, 0.294), 2px 0 rgba(0, 0, 0, 0.294), 0 -2px rgba(0, 0, 0, 0.294);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition-duration: 100ms;
+}
+
+.Title:hover{  
+    text-shadow: 0;
+    padding-top:25px; 
+    transition-duration: 100ms;
+
+}
+
+.Title h1{ 
+font-weight: 400;
+}
+
+.Title h4{ 
+    padding-bottom: 30px;
+    }
+
+.Description{   
+    width: 290px;
+    height: 105px;
+    color:white;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
 }

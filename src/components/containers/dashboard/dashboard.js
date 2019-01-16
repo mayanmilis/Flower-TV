@@ -7,9 +7,13 @@ class Dashboard extends Component{
 
     render(){
         return( 
-            <div className='Dashboard'> 
-            <h3>Movies</h3>
-            <hr/>
+            <div>
+                <div className='Dashboard'> 
+                 <h3>Flower TV</h3>
+                 <h1>Try, Stay.</h1> 
+                 <hr/> 
+                 </div>
+                 <div className='MostPopular'>Most Popular</div> 
                 <Movies/>
             </div>
         )

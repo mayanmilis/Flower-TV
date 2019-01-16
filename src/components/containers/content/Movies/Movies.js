@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import Movie from './Movie'
 import Json from '../../../../json files/Movies.json'
+import './Movie.css'
 
 class Movies extends Component{  
     state = {   
@@ -22,7 +23,7 @@ class Movies extends Component{
             return <div>Loading...</div>
         }else{  
             return( 
-                <div className='Movies'>   
+                <div className='Container'>   
                   <ul>  
                       {movies&&movies.map(movie => {   
                           return(   
@@ -36,9 +37,13 @@ class Movies extends Component{
                               />
                               </div>
                           )
-                      })}
+                      }).slice(0,10)}
                   </ul>
+                  <div className='AllMovies'> 
+                      All Movies >>
+                  </div>
                 </div>
+                
             )
         }
         
