@@ -1,8 +1,15 @@
+.NavbarContainer{   
+width: 100%;
+height: 100%;
+}
+
 .Navbar nav{    
     padding: 0;
     margin:0;
-
-
+    display: block;
+    width: 100%;
+    position: fixed;
+    overflow: hidden;
 }
 .Navbar ul{
     list-style: none;
@@ -16,7 +23,7 @@
     float: left;
     font-size: 19px;
     font-weight: 700;
-    padding: 16px 20px;
+    padding: 16.5px 20px;
     color: white;
     text-align: center;
     display: block;
@@ -44,4 +51,14 @@
     background-color:white;
     margin: 5px;
 
+}
+
+.SideBar{   
+    width: 400px;
+    height: 600px;
+    background-image: linear-gradient(rgba(34, 34, 34, 0.787) 40%, black );
+    right:0;
+    transform: 300ms;
+    position: fixed;
+    margin-top: 55px;
 }

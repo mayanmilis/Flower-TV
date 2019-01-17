@@ -1,10 +1,10 @@
 import React from 'react'
-import './Movie.css'
+import './Show.css'
 
-const movie = (props) =>{    
+const show = (props) =>{    
     let {title,rating,poster,description} = props;
     return( 
-        <div className='Movie' style={{backgroundImage:`url(${poster})`}}> 
+        <div className='Show' style={{backgroundImage:`url(${poster})`}}> 
           <div className='Fade'>   
                 <div className='Title'>  
                         <h1>{title}</h1>
@@ -13,9 +13,10 @@ const movie = (props) =>{
                              {description}
                          </div> 
                  </div>
+
          </div>
         </div>
     )
 }
 
-export default movie
+export default show

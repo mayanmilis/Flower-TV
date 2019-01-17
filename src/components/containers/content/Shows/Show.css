@@ -1,0 +1,23 @@
+
+.AllShows{
+    color:white;
+    font-size: 15px;    
+    padding-left: 40px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top:10px;
+    margin-bottom: 10px;
+}
+
+.Show{
+    width: 300px;
+    height: 300px;
+    float: left;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
+
+}

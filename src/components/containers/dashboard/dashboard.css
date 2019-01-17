@@ -1,22 +1,19 @@
 .Dashboard{
     width: 100%;
+    padding-top:60px; 
 }
 
-.Dashboard hr{
-height:2px;
-width: 100%;
-background-color: red;
-margin-top: 10px;
-border: none;
-margin-bottom: 0;
-}
 .MostPopular{   
     width: 100%;
-    margin-top: 0;
+    height:35px;
+    padding-top:5px;
+    margin-top: 10px;
     color: white;
-    font-size: 30px;
+    font-size: 25px;
     padding-left: 10px;
-    background-color:  rgb(255, 0, 0);
+    border-top: 1px solid rgb(139, 78, 78);
+    border-bottom: 1px solid rgb(139, 78, 78);
+    background-color:  rgb(218, 0, 0);
 }
 
 .Dashboard h3{  
@@ -24,7 +21,7 @@ margin-bottom: 0;
     margin-bottom:0;
     font-size: 40px;
     padding-left: 20px;
-    color: red;
+    color: rgb(218, 0, 0);
 }
 
 .Dashboard h1{  

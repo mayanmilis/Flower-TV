@@ -23,6 +23,7 @@ class Movies extends Component{
             return <div>Loading...</div>
         }else{  
             return( 
+                <div>   
                 <div className='Container'>   
                   <ul>  
                       {movies&&movies.map(movie => {   
@@ -39,6 +40,7 @@ class Movies extends Component{
                           )
                       }).slice(0,10)}
                   </ul>
+                </div>
                   <div className='AllMovies'> 
                       All Movies >>
                   </div>
