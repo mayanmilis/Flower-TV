@@ -37,10 +37,17 @@ class Navbar extends Component{
                         </div>
                     <div className='SideBar' style={{right: sidebarPosition}}>  
                         <ul>    
+<<<<<<< HEAD
                             <li><a><i class="fas fa-home"></i> Home</a></li>
                             <li><a><i class="fas fa-th-large"></i> Library</a></li>
                             <li><a><i class="fas fa-tv"></i> Watch Anywhere</a></li>
                             <li><a><i class="fas fa-chess-queen"></i> Choose Your Plan</a></li>
+=======
+                            <li><a>Home</a></li>
+                            <li><a>Library</a></li>
+                            <li><a>Watch Anywhere</a></li>
+                            <li><a>Choose Your Plan</a></li>
+>>>>>>> 8e5a5a836da58f6f061bf837fd72a651bc7e5098
                         </ul>
                         <div className='SideBarBtn'>
                             <ul>    
