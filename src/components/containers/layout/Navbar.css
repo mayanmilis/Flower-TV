@@ -55,32 +55,20 @@ height: 100%;
 
 .SideBar{   
     width: 300px;
-<<<<<<< HEAD
     height: 420px;
     background-image: linear-gradient(rgba(34, 34, 34, 0.89) 40%, black );
-=======
-    height: 500px;
-    background-image: linear-gradient(rgba(34, 34, 34, 0.787) 40%, black );
->>>>>>> 8e5a5a836da58f6f061bf837fd72a651bc7e5098
     right:0;
     transition-duration: 200ms;
     position: fixed;
     margin-top: 55px;
-<<<<<<< HEAD
     border-radius: 2px;
     border: 1px solid black;
-=======
->>>>>>> 8e5a5a836da58f6f061bf837fd72a651bc7e5098
 }
 
 .SideBar ul{    
     list-style: none;
     padding-left: 0;
-<<<<<<< HEAD
     margin-top:20px;
-=======
-    margin-top:50px;
->>>>>>> 8e5a5a836da58f6f061bf837fd72a651bc7e5098
     margin-bottom: 0;
 }
 
@@ -101,14 +89,11 @@ height: 100%;
     
 }
 
-<<<<<<< HEAD
 .SideBar i{ 
     margin-right: 20px;
     
 }
 
-=======
->>>>>>> 8e5a5a836da58f6f061bf837fd72a651bc7e5098
 .SideBarBtn{ 
     width: 300px;
     text-align: center;
@@ -118,12 +103,8 @@ height: 100%;
 }
 
 .SideBarBtn ul{ 
-<<<<<<< HEAD
     margin-top:0 ;
     
-=======
-    margin-top: 20px;
->>>>>>> 8e5a5a836da58f6f061bf837fd72a651bc7e5098
 }
 
 .SideBarBtn button{ 
@@ -134,7 +115,6 @@ border: 1px solid rgb(218, 0, 0);
 font-size: 20px;
 color:white;
 padding-top: 10px;
-<<<<<<< HEAD
 margin-bottom: 10px;
 margin-top:10px;
 padding-bottom: 10px;
@@ -142,24 +122,12 @@ cursor: pointer;
 transition-duration: 200ms;
 border-radius: 2px;
 
-=======
-margin: 10px;
-margin-top:0;
-padding-bottom: 10px;
-cursor: pointer;
-transition-duration: 200ms;
->>>>>>> 8e5a5a836da58f6f061bf837fd72a651bc7e5098
 }
 
 .SideBarBtn button:hover{ 
     color:white;
-<<<<<<< HEAD
     background-color: rgb(190, 0, 0);
     border: 2px solid rgb(190, 0, 0);
-=======
-    background-color: black;
-    border: 2px solid rgb(0, 0, 0);
->>>>>>> 8e5a5a836da58f6f061bf837fd72a651bc7e5098
     transition-duration: 200ms;
 }
 
