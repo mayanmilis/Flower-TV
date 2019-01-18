@@ -54,11 +54,83 @@ height: 100%;
 }
 
 .SideBar{   
-    width: 400px;
-    height: 600px;
-    background-image: linear-gradient(rgba(34, 34, 34, 0.787) 40%, black );
+    width: 300px;
+    height: 420px;
+    background-image: linear-gradient(rgba(34, 34, 34, 0.89) 40%, black );
     right:0;
-    transform: 300ms;
+    transition-duration: 200ms;
     position: fixed;
     margin-top: 55px;
+    border-radius: 2px;
+    border: 1px solid black;
+}
+
+.SideBar ul{    
+    list-style: none;
+    padding-left: 0;
+    margin-top:20px;
+    margin-bottom: 0;
+}
+
+.SideBar ul :hover{    
+    background-color: black;
+    cursor: pointer;
+    }
+
+.SideBar li{    
+    width: 300px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    margin: 0;
+    color: white;
+    font-size: 20px;
+    transition-duration: 200ms;
+    
+}
+
+.SideBar i{ 
+    margin-right: 20px;
+    
+}
+
+.SideBarBtn{ 
+    width: 300px;
+    text-align: center;
+    font-size: 20px;
+    color:white;
+    margin-top:0;
+}
+
+.SideBarBtn ul{ 
+    margin-top:0 ;
+    
+}
+
+.SideBarBtn button{ 
+width: 200px;
+height: 50px;
+background-color: rgb(218, 0, 0);
+border: 1px solid rgb(218, 0, 0);
+font-size: 20px;
+color:white;
+padding-top: 10px;
+margin-bottom: 10px;
+margin-top:10px;
+padding-bottom: 10px;
+cursor: pointer;
+transition-duration: 200ms;
+border-radius: 2px;
+
+}
+
+.SideBarBtn button:hover{ 
+    color:white;
+    background-color: rgb(190, 0, 0);
+    border: 2px solid rgb(190, 0, 0);
+    transition-duration: 200ms;
+}
+
+.SideBarBtn button:focus{  
+    border: 2px solid rgb(3, 3, 3);
 }

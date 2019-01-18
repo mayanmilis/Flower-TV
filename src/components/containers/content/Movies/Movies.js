@@ -42,7 +42,7 @@ class Movies extends Component{
                   </ul>
                 </div>
                   <div className='AllMovies'> 
-                      All Movies >>
+                      All Movies <i class="fas fa-angle-double-right"></i>
                   </div>
                 </div>
                 

@@ -43,7 +43,7 @@ class Shows extends Component{
                 </div>
                 
                   <div className='AllShows'> 
-                      All TV Shows >>
+                      All TV Shows <i class="fas fa-angle-double-right"></i>
                   </div>
                 </div>
                 
