@@ -54,11 +54,73 @@ height: 100%;
 }
 
 .SideBar{   
-    width: 400px;
-    height: 600px;
+    width: 300px;
+    height: 500px;
     background-image: linear-gradient(rgba(34, 34, 34, 0.787) 40%, black );
     right:0;
-    transform: 300ms;
+    transition-duration: 200ms;
     position: fixed;
     margin-top: 55px;
+}
+
+.SideBar ul{    
+    list-style: none;
+    padding-left: 0;
+    margin-top:50px;
+    margin-bottom: 0;
+}
+
+.SideBar ul :hover{    
+    background-color: black;
+    cursor: pointer;
+    }
+
+.SideBar li{    
+    width: 300px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    margin: 0;
+    color: white;
+    font-size: 20px;
+    transition-duration: 200ms;
+    
+}
+
+.SideBarBtn{ 
+    width: 300px;
+    text-align: center;
+    font-size: 20px;
+    color:white;
+    margin-top:0;
+}
+
+.SideBarBtn ul{ 
+    margin-top: 20px;
+}
+
+.SideBarBtn button{ 
+width: 200px;
+height: 50px;
+background-color: rgb(218, 0, 0);
+border: 1px solid rgb(218, 0, 0);
+font-size: 20px;
+color:white;
+padding-top: 10px;
+margin: 10px;
+margin-top:0;
+padding-bottom: 10px;
+cursor: pointer;
+transition-duration: 200ms;
+}
+
+.SideBarBtn button:hover{ 
+    color:white;
+    background-color: black;
+    border: 2px solid rgb(0, 0, 0);
+    transition-duration: 200ms;
+}
+
+.SideBarBtn button:focus{  
+    border: 2px solid rgb(3, 3, 3);
 }
