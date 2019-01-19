@@ -1,3 +1,10 @@
+.DashboardContainer{    
+    display: flex;
+    flex-direction: column;
+    border: 5px solid white;
+    
+}
+
 .Dashboard{
     width: 100%;
     padding-top:60px; 

@@ -1,0 +1,12 @@
+.SignupContainer{   
+    padding-top:200px;
+    border: 5px solid white;
+    width: 80%;
+    background-color: black;
+    
+}
+
+.SignupForm{   
+    border: 5px solid white;
+    width: 50%;
+    }

@@ -1,15 +1,20 @@
 import React, { Component } from 'react'
 import Dashboard from './components/containers/dashboard/dashboard'
 import Navbar from './components/containers/layout/Navbar'
+import {BrowserRouter, Route} from 'react-router-dom'
+import Signup from '../src/components/containers/Forms/Signup';
 
 class App extends Component {
   render() {
     return (
-      <div>
+      <BrowserRouter> 
+      <div> 
         <Navbar/>
-          <Dashboard/>
-
+              <Route exact path='/' component={Dashboard}/>
+              <Route path='/signup' component={Signup}/>
       </div>
+      </BrowserRouter>
+
     );
   }
 }
