@@ -2,12 +2,14 @@
     display: flex;
     flex-direction: column;
     padding-top: 60px;
+    background-image: url('../../../images/tv\ shows.jpg');
+    background-size: cover;
 }
 
 .Signup{   
     width: 80%; 
     margin: auto;
-    background-color: rgb(34, 34, 34);
+    background-color: rgba(8, 8, 8, 0.986);
     padding-bottom: 200px;
     padding-top: 10px;
     }
@@ -45,7 +47,7 @@
     height: 450px;
     padding-top:40px; 
     margin: auto;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     border-radius: 3px;
 }
 

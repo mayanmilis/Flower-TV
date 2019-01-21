@@ -38,10 +38,10 @@ class Navbar extends Component{
                         </div>
                     <div className='SideBar' style={{right: sidebarPosition}} onClick={this.handleSidebar}>  
                         <ul>    
-                            <li><NavLink to='/'><i class="fas fa-home"></i> Home</NavLink></li>
-                            <li><NavLink to='/'><i class="fas fa-th-large"></i> Library</NavLink></li>
-                            <li><NavLink to='/'><i class="fas fa-tv"></i> Watch Anywhere</NavLink></li>
-                            <li><NavLink to='/'><i class="fas fa-chess-queen"></i> Choose Your Plan</NavLink></li>
+                            <NavLink to='/'><li><i class="fas fa-home"></i> Home</li></NavLink>
+                          <NavLink to='/library'><li><i class="fas fa-th-large"></i> Library</li></NavLink>
+                            <NavLink to='/watchanywhere'><li><i class="fas fa-tv"></i> Watch Anywhere</li></NavLink>
+                            <NavLink to='/chooseplan'><li><i class="fas fa-chess-queen"></i> Choose Your Plan</li></NavLink>
                         </ul>
                         <div className='SideBarBtn'>
                             <ul>    

@@ -1,6 +1,13 @@
 .Container{ 
-    width: 100%;
+
     height: 600px;
+
+}
+
+.Container ul{ 
+    padding: 0;
+    width:1500px;
+    margin-top: 0;
 }
 
 .Movie{
@@ -11,6 +18,7 @@
     background-position: center;
     overflow: hidden;
     text-overflow: ellipsis;
+    
 }
 .Fade{
     width: 300px;
