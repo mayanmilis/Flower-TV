@@ -13,6 +13,7 @@ class Navbar extends Component{
             sidebarDisplay: !sidebarDisplay
         })
     }
+    
 
     render(){
         let sidebarPosition;
@@ -27,7 +28,6 @@ class Navbar extends Component{
                         <nav>   
                             <ul>   
                             <li><NavLink to='/'>Flower TV</NavLink></li>
-                            <li><NavLink to='/signup'>Sign-Up</NavLink></li>
                                 <div className='Burger' onClick={this.handleSidebar}>
                                     <div></div>
                                     <div></div>
@@ -36,7 +36,7 @@ class Navbar extends Component{
                             </ul>
                         </nav>
                         </div>
-                    <div className='SideBar' style={{right: sidebarPosition}}>  
+                    <div className='SideBar' style={{right: sidebarPosition}} onClick={this.handleSidebar}>  
                         <ul>    
                             <li><NavLink to='/'><i class="fas fa-home"></i> Home</NavLink></li>
                             <li><NavLink to='/'><i class="fas fa-th-large"></i> Library</NavLink></li>
@@ -45,7 +45,7 @@ class Navbar extends Component{
                         </ul>
                         <div className='SideBarBtn'>
                             <ul>    
-                                <button>Join</button>
+                                <NavLink to='/signup'><button>Join</button></NavLink>
                                 <button>Free Month Trial</button>
                             </ul>   
                         </div>

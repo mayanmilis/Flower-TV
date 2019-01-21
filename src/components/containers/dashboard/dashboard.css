@@ -1,13 +1,13 @@
 .DashboardContainer{    
     display: flex;
     flex-direction: column;
-    border: 5px solid white;
-    
+    padding-top: 60px;    
 }
 
 .Dashboard{
     width: 100%;
-    padding-top:60px; 
+    padding-top: 10px;
+
 }
 
 .MostPopular{   
@@ -17,11 +17,15 @@
     margin-top: 10px;
     color: white;
     font-size: 25px;
-    padding-left: 10px;
     border-top: 1px solid rgb(139, 78, 78);
     border-bottom: 1px solid rgb(139, 78, 78);
     background-color:  rgb(218, 0, 0);
 }
+
+.MostPopular p{ 
+    padding-left: 10px;
+    margin-top:0;
+}   
 
 .Dashboard h3{  
     margin-top: 0;

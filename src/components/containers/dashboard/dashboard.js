@@ -12,9 +12,13 @@ class Dashboard extends Component{
                  <h3>Flower TV</h3>
                  <h1>Try, Stay.</h1> 
                  </div>
-                 <div className='MostPopular'>Most Popular Movies</div> 
+                 <div className='MostPopular'>
+                    <p>Most Popular Movies</p>
+                    </div> 
                 <Movies/>
-                <div className='MostPopular'>Most Popular TV Shows</div>
+                <div className='MostPopular'>   
+                    <p>Most Popular TV Shows</p>
+                    </div>
                 <Shows/>
             </div>
         )

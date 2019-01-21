@@ -65,9 +65,9 @@
     height: 420px;
     background-image: linear-gradient(rgba(34, 34, 34, 0.89) 40%, black );
     right:0;
+    margin-top: 55px;
     transition-duration: 200ms;
     position: fixed;
-    margin-top: 55px;
     border-radius: 2px;
     border: 1px solid black;
 }
@@ -140,11 +140,11 @@ border-radius: 2px;
 
 .SideBarBtn button:hover{ 
     color:white;
-    background-color: rgb(190, 0, 0);
-    border: 2px solid rgb(190, 0, 0);
+    background-color: rgb(148, 2, 2);
+    border: 2px solid rgb(148, 2, 2);
     transition-duration: 200ms;
 }
 
 .SideBarBtn button:focus{  
-    border: 2px solid rgb(3, 3, 3);
+    outline: none;
 }
