@@ -15,11 +15,15 @@ class Dashboard extends Component{
                  <div className='MostPopular'>
                     <p>Most Popular Movies</p>
                     </div> 
-                <Movies/>
+                    <div className='Movies'>   
+                    <Movies/>
+                    </div>
                 <div className='MostPopular'>   
                     <p>Most Popular TV Shows</p>
                     </div>
-                <Shows/>
+                    <div className='Shows'>   
+                    <Shows/>
+                    </div>
             </div>
         )
     }

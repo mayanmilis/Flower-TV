@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import {NavLink} from 'react-router-dom'
 import Movie from './Movie'
 import Json from '../../../../json files/Movies.json'
 import './Movie.css'
@@ -42,7 +43,7 @@ class Movies extends Component{
                   </ul>
                 </div>
                   <div className='AllMovies'> 
-                      All Movies <i class="fas fa-angle-double-right"></i>
+                      <NavLink to='library'>All Movies <i class="fas fa-angle-double-right"></i></NavLink>
                   </div>
                 </div>
                 

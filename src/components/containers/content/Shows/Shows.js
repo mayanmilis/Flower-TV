@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import Show from './Show'
+import {NavLink} from 'react-router-dom'
 import Json from '../../../../json files/Shows.json'
 import './Show.css'
 
@@ -41,9 +42,8 @@ class Shows extends Component{
                         }).slice(0,10)}
                     </ul>
                 </div>
-                
                   <div className='AllShows'> 
-                      All TV Shows <i class="fas fa-angle-double-right"></i>
+                  <NavLink to='library'>All Shows <i class="fas fa-angle-double-right"></i></NavLink>
                   </div>
                 </div>
                 

@@ -7,7 +7,14 @@
 .Dashboard{
     width: 100%;
     padding-top: 10px;
+}
 
+.Movies{    
+    margin: auto;
+}
+
+.Shows{    
+    margin: auto;
 }
 
 .MostPopular{   
@@ -33,6 +40,10 @@
     font-size: 40px;
     padding-left: 20px;
     color: rgb(218, 0, 0);
+    visibility: 1;
+    opacity: 1;
+    transition: visibility 1s, opacity 1s linear;
+    
 }
 
 .Dashboard h1{  

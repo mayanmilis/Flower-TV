@@ -14,11 +14,17 @@ const library = () =>{
          <div className='MostPopular'>
             <p>Movies</p>
             </div> 
-        <AllMovies/>
+            <div className='Movies'>   
+            <AllMovies/>
+            </div>
+
         <div className='MostPopular'>   
             <p>TV Shows</p>
             </div>
-        <AllShows/>
+            <div className='Shows'>   
+            <AllShows/>
+            </div>
+        
     </div>
     )
 }

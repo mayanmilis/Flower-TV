@@ -1,12 +1,155 @@
-.WatchAnywhere ul{ 
+.WatchAnywhere{ 
+    width: 80%;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.WatchAnywhere ul{  
     list-style: none;
-    }
+    height: 300px;
+    width: 95%;
+    padding-left: 0;
+    padding-top: 50px;
+    margin: auto;
+
+    
+}   
+.WatchAnywhere li{  
+    text-align: center;
+    float: left;
+    width: 32.8%;
+    height: 200x;
+    margin-left: 2px;
+    margin-right: 2px;
+    padding-top: 20px; 
+    border-radius: 5px;
+    background-color: black;
+}
+
+.WatchAnywhere li:hover{  
+background-color: rgba(218, 0, 0, 0.102);
+transition-duration: 400ms;
+}
 
 .WatchAnywhere p{ 
 color: white;
+padding-top: 20px;
 }
+
+.WatchAnywhere h4{ 
+    color: white;
+    }
 
 .WatchAnywhere i{ 
     color: white;
     font-size: 72px;
     }
+
+.WatchAnywhereDetails{
+    width: 80%;
+    height: 250px;;
+    margin: auto;
+    overflow-wrap: break-word;
+    
+}
+
+.WatchAnywhereBtn{  
+    width: 300px;
+    margin: auto;
+
+}
+.WatchAnywhere button{  
+    width: 300px;
+    height: 50px;
+    background-color: rgb(218, 0, 0);
+    border: 1px solid rgb(218, 0, 0);
+    font-size: 20px;
+    color:white;
+    padding-top: 10px;
+    margin-bottom: 10px;
+    margin-top:10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+    transition-duration: 200ms;
+    border-radius: 2px;
+
+}
+
+.WatchAnywhere button:hover{ 
+    color:white;
+    background-color: rgb(148, 2, 2);
+    border: 2px solid rgb(148, 2, 2);
+    transition-duration: 200ms;
+}
+
+.WatchAnywhere button:focus{  
+    outline: none;
+}
+
+.ChoosePlan{    
+    width: 80%;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    border-radius: 5ps;
+}
+
+.ChoosePlan table{ 
+    width: 80%;
+    margin: auto; 
+    border: 1px solid  rgb(34, 34, 34);
+    color: white;
+}
+.ChoosePlan th, td{ 
+    padding-top:5px;
+    padding-bottom:5px;
+    text-align: center;
+    border: 2px solid  rgb(34, 34, 34);
+}
+
+.ChoosePlan th[id='left'], td[id='left']{ 
+    text-align: left;
+    border: none;
+    border: 1px solid  rgb(34, 34, 34);
+    padding-left: 5px;
+
+}
+
+.ChoosePlanBtn{  
+    width: 300px;
+    margin: auto;
+
+}
+.ChoosePlan button{  
+    width: 300px;
+    height: 50px;
+    background-color: rgb(218, 0, 0);
+    border: 1px solid rgb(218, 0, 0);
+    font-size: 20px;
+    color:white;
+    padding-top: 10px;
+    margin-bottom: 10px;
+    margin-top:10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+    transition-duration: 200ms;
+    border-radius: 2px;
+
+}
+
+.ChoosePlan button:hover{ 
+    color:white;
+    background-color: rgb(148, 2, 2);
+    border: 2px solid rgb(148, 2, 2);
+    transition-duration: 200ms;
+}
+
+.ChoosePlan button:focus{  
+    outline: none;
+}

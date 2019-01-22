@@ -1,5 +1,5 @@
 
-.AllShows{
+.AllShows a{
     color:white;
     font-size: 15px;    
     padding-left: 40px;
@@ -9,6 +9,7 @@
     margin-top:10px;
     margin-bottom: 10px;
     float: left;
+    text-decoration: none;
 }
 
 .Show{
