@@ -6,6 +6,7 @@ import Signup from '../src/components/containers/Forms/Signup'
 import Library from './components/containers/content/Library'
 import ChoosePlan from './components/containers/layout/SideBar/ChoosePlan'
 import WatchAnywhere from './components/containers/layout/SideBar/WatchAnywhere'
+import Details from './components/containers/content/Details'
 
 class App extends Component {
   render() {
@@ -18,6 +19,7 @@ class App extends Component {
               <Route path='/library' component={Library}/>
               <Route path='/chooseplan' component={ChoosePlan}/>
               <Route path='/watchanywhere' component={WatchAnywhere}/>
+              <Route path='/details/:id' component={Details}/>
       </div>
       </BrowserRouter>
 

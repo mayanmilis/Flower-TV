@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {NavLink} from 'react-router-dom'
+import {NavLink, Link} from 'react-router-dom'
 import Movie from './Movie'
 import Json from '../../../../json files/Movies.json'
 import './Movie.css'
@@ -29,15 +29,16 @@ class Movies extends Component{
                   <ul>  
                       {movies&&movies.map(movie => {   
                           return(   
+                              <Link to={'details'+ movie.id} key={movie.id}> 
                               <div>
                               <Movie
-                              key={movie.id}
+                              id={movie.id}
                               title={movie.title}
                               rating={movie.vote_average}
                               poster={movie.poster_path}
                               description={movie.overview}
                               />
-                              </div>
+                              </div></Link>
                           )
                       }).slice(0,10)}
                   </ul>

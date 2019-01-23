@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import Movie from './Movie'
+import {Link} from 'react-router-dom'
 import Json from '../../../../json files/Movies.json'
 import './Movie.css'
 
@@ -28,15 +29,16 @@ class AllMovies extends Component{
                   <ul>  
                       {movies&&movies.map(movie => {   
                           return(   
-                              <div>
-                              <Movie
-                              key={movie.id}
-                              title={movie.title}
-                              rating={movie.vote_average}
-                              poster={movie.poster_path}
-                              description={movie.overview}
-                              />
-                              </div>
+                            <Link to={'details'+ movie.id} key={movie.id}> 
+                            <div>
+                            <Movie
+                            id={movie.id}
+                            title={movie.title}
+                            rating={movie.vote_average}
+                            poster={movie.poster_path}
+                            description={movie.overview}
+                            />
+                            </div></Link>
                           )
                       })}
                   </ul>

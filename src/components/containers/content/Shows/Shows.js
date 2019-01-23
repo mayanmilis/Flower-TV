@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import Show from './Show'
-import {NavLink} from 'react-router-dom'
+import ShowDetails from './ShowDetails'
+import {NavLink, Link} from 'react-router-dom'
 import Json from '../../../../json files/Shows.json'
 import './Show.css'
 
@@ -29,15 +30,24 @@ class Shows extends Component{
                     <ul>  
                         {shows&&shows.map(show => {   
                             return(   
+                                <Link to={'detalis/' + show.id} key={show.id}>
                                 <div>
                                 <Show
-                                key={show.id}
+                                id={show.id}
+                                title={show.name}
+                                rating={show.vote_average}
+                                poster={show.poster_path}
+                                description={show.overview}
+                                />
+                                <ShowDetails
+                                id={show.id}
                                 title={show.name}
                                 rating={show.vote_average}
                                 poster={show.poster_path}
                                 description={show.overview}
                                 />
                                 </div>
+                                </Link>
                             )
                         }).slice(0,10)}
                     </ul>

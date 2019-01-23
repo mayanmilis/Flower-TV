@@ -16,21 +16,21 @@ const watchAnywhere = () =>{
                 <ul>    
                     <li>    
                         <div className='WatchAnywhereDetails'>  
-                            <i class="fas fa-tv"></i>
+                            <i className="fas fa-tv"></i>
                             <h4>Tv</h4> 
                             <p>Smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</p>
                         </div>
                     </li>
                     <li>    
                         <div className='WatchAnywhereDetails'>  
-                         <i class="fas fa-laptop"></i>
+                         <i className="fas fa-laptop"></i>
                             <h4>Computer</h4> 
                             <p>Watch right on FlowerTV.com.</p>
                         </div>
                     </li>
                     <li>    
                         <div className='WatchAnywhereDetails'>  
-                        <i class="fas fa-mobile-alt"></i>
+                        <i className="fas fa-mobile-alt"></i>
                             <h4>Smartphones</h4> 
                             <p>Available on phone and tablet, wherever you go.</p>
                         </div>
