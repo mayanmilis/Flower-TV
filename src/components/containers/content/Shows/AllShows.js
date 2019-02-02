@@ -3,6 +3,7 @@ import Show from './Show'
 import {Link} from 'react-router-dom'
 import Json from '../../../../json files/Shows.json'
 import './Show.css'
+import {connect} from 'react-redux'
 
 class AllShows extends Component{  
     state = {   
@@ -15,6 +16,8 @@ class AllShows extends Component{
                 isLoaded: true,
                 shows: Json.results
             })
+            let list = Json.results
+            this.props.mountShows(list)
     }
 
     render(){   
@@ -53,4 +56,17 @@ class AllShows extends Component{
     }
 }
 
-export default AllShows
+const mapDispatchToProps = (dispatch)=>{    
+    return{ 
+        mountShows: (list) => dispatch({type: 'MOUNT_SHOWS', list:list})
+    }
+}
+
+const mapStateToProps = (state)=>{  
+console.log(state)
+    return{ 
+        shows: state.shows
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(AllShows)

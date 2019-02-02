@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
 import Show from './Show'
-import ShowDetails from './ShowDetails'
 import {NavLink, Link} from 'react-router-dom'
 import Json from '../../../../json files/Shows.json'
 import './Show.css'
@@ -39,13 +38,6 @@ class Shows extends Component{
                                 poster={show.poster_path}
                                 description={show.overview}
                                 />
-                                <ShowDetails
-                                id={show.id}
-                                title={show.name}
-                                rating={show.vote_average}
-                                poster={show.poster_path}
-                                description={show.overview}
-                                />
                                 </div>
                                 </Link>
                             )
@@ -53,7 +45,7 @@ class Shows extends Component{
                     </ul>
                 </div>
                   <div className='AllShows'> 
-                  <NavLink to='library'>All Shows <i class="fas fa-angle-double-right"></i></NavLink>
+                  <NavLink to='library'>All Shows <i className="fas fa-angle-double-right"></i></NavLink>
                   </div>
                 </div>
                 

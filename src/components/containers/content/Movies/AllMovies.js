@@ -3,6 +3,7 @@ import Movie from './Movie'
 import {Link} from 'react-router-dom'
 import Json from '../../../../json files/Movies.json'
 import './Movie.css'
+import {connect} from 'react-redux'
 
 class AllMovies extends Component{  
     state = {   
@@ -15,6 +16,8 @@ class AllMovies extends Component{
                 isLoaded: true,
                 movies: Json.results
             })
+            let list = Json.results
+            this.props.mountMovies(list)
     }
 
     render(){   
@@ -29,7 +32,7 @@ class AllMovies extends Component{
                   <ul>  
                       {movies&&movies.map(movie => {   
                           return(   
-                            <Link to={'details'+ movie.id} key={movie.id}> 
+                            <Link to={'details/'+ movie.id} key={movie.id}> 
                             <div>
                             <Movie
                             id={movie.id}
@@ -51,4 +54,17 @@ class AllMovies extends Component{
     }
 }
 
-export default AllMovies
+const mapDispatchToProps = (dispatch)=>{    
+    return{ 
+        mountMovies: (list) => dispatch({type: 'MOUNT_MOVIES', list:list})
+    }
+}
+
+const mapStateToProps = (state)=>{  
+
+    return{ 
+        movies: state.movies
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(AllMovies)

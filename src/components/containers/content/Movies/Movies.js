@@ -29,7 +29,7 @@ class Movies extends Component{
                   <ul>  
                       {movies&&movies.map(movie => {   
                           return(   
-                              <Link to={'details'+ movie.id} key={movie.id}> 
+                              <Link to={'details/'+ movie.id} key={movie.id}> 
                               <div>
                               <Movie
                               id={movie.id}
@@ -44,7 +44,7 @@ class Movies extends Component{
                   </ul>
                 </div>
                   <div className='AllMovies'> 
-                      <NavLink to='library'>All Movies <i class="fas fa-angle-double-right"></i></NavLink>
+                      <NavLink to='library'>All Movies <i className="fas fa-angle-double-right"></i></NavLink>
                   </div>
                 </div>
                 

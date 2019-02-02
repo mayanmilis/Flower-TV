@@ -1,14 +1,30 @@
-import React from 'react'
-import ShowDetails from './Shows/ShowDetails'
+import React, { Component } from 'react'
+import {connect} from 'react-redux'
 
-
-const details = () =>{    
-
-    return( 
-        <div> 
-            <ShowDetails/>
-        </div>
-    )
+class Details extends Component{    
+    
+    render(){   
+        // const { id, title, rating, description, poster } = props;
+        return( 
+            <div> 
+                Title: 
+                Rating: 
+                Description: 
+            </div>
+        )
+    }
 }
 
-export default details
+
+
+const mapStateToProps = (state, ownProps)=>{  
+    const id = ownProps.match.params.id
+    
+console.log(ownProps)
+    return{ 
+        movies: state.movies,
+        shows: state.shows
+    }
+}
+
+export default connect(mapStateToProps)(Details)
