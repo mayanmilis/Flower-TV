@@ -29,7 +29,7 @@ class Shows extends Component{
                     <ul>  
                         {shows&&shows.map(show => {   
                             return(   
-                                <Link to={'detalis/' + show.id} key={show.id}>
+                                <Link to={'/details/'+ show.id} key={show.id}>
                                 <div>
                                 <Show
                                 id={show.id}

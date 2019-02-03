@@ -1,0 +1,36 @@
+.DetailsContainer{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: 1200px;
+    margin: auto;
+    background-color: black;
+    border-radius: 5px;
+}
+
+.DetailsContainer h2{   
+    margin: 20px;
+}
+
+.DetailsContainer h2,p{   
+    margin: 20px;
+    font-size: 20px;
+}
+.DetailsHeader{
+    display: flex;
+    flex-wrap: wrap;
+ }
+ .DetailsImageContainer{    
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+
+    justify-content: space-around;
+
+ }
+.Image{  
+    background-size: cover;
+    background-position: center;
+    
+
+}

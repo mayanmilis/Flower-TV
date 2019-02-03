@@ -32,7 +32,7 @@ class AllMovies extends Component{
                   <ul>  
                       {movies&&movies.map(movie => {   
                           return(   
-                            <Link to={'details/'+ movie.id} key={movie.id}> 
+                            <Link to={'/details/'+ movie.id} key={movie.id}> 
                             <div>
                             <Movie
                             id={movie.id}

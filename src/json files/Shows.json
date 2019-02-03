@@ -10,6 +10,7 @@
           10759
         ],
         "name": "Vikings",
+        "youtube": "https://www.youtube.com/embed/VWBDosdLhoY" ,
         "popularity": 279.347,
         "origin_country": [
           "CA"
@@ -30,6 +31,7 @@
           10765
         ],
         "name": "The Flash",
+       "youtube":"https://www.youtube.com/embed/xoNRHfpak4Y" ,
         "popularity": 264.843,
         "origin_country": [
           "US"
@@ -52,6 +54,7 @@
           10759
         ],
         "name": "Arrow",
+       "youtube": "https://www.youtube.com/embed/D5J9h0HPklE",
         "popularity": 259.703,
         "origin_country": [
           "US"
@@ -74,6 +77,7 @@
           10765
         ],
         "name": "Fairy Tail",
+        "youtube": "https://www.youtube.com/embed/AtlsjFlcRZ0",
         "popularity": 253.316,
         "origin_country": [
           "JP"
@@ -96,6 +100,7 @@
           10765
         ],
         "name": "Dragon Ball",
+        "youtube": "https://www.youtube.com/embed/2P8bjRTeC3E" ,
         "popularity": 242.1,
         "origin_country": [
           "JP"
@@ -117,6 +122,7 @@
           14
         ],
         "name": "Gotham",
+        "youtube":"https://www.youtube.com/embed/mUe79BSig_4" ,
         "popularity": 225.793,
         "origin_country": [
           "US"
@@ -138,6 +144,7 @@
           18
         ],
         "name": "Naruto Shippūden",
+        "youtube":"https://www.youtube.com/embed/1WLO0Owi5-A" ,
         "popularity": 189.989,
         "origin_country": [
           "JP"
@@ -159,6 +166,7 @@
           10765
         ],
         "name": "Titans",
+        "youtube":"https://www.youtube.com/embed/h2nN_CC-Us8" ,
         "popularity": 181.445,
         "origin_country": [
           "US"
@@ -180,6 +188,7 @@
           10765
         ],
         "name": "Sword Art Online",
+        "youtube": "https://www.youtube.com/embed/6ohYYtxfDCg",
         "popularity": 178.646,
         "origin_country": [
           "JP"
@@ -201,6 +210,7 @@
           10765
         ],
         "name": "Supernatural",
+        "youtube":"https://www.youtube.com/embed/VHW0RkFStng" ,
         "popularity": 175.956,
         "origin_country": [
           "US"
@@ -221,6 +231,7 @@
           35
         ],
         "name": "Family Guy",
+        "youtube": "https://www.youtube.com/embed/lJbaVsF3Asc",
         "popularity": 168.326,
         "origin_country": [
           "US"
@@ -242,6 +253,7 @@
           10759
         ],
         "name": "One Piece",
+        "youtube":"https://www.youtube.com/embed/Jvkq7akLDiA" ,
         "popularity": 165.88,
         "origin_country": [
           "JP"
@@ -263,6 +275,7 @@
           10765
         ],
         "name": "Game of Thrones",
+        "youtube": "https://www.youtube.com/embed/wA38GCX4Tb0",
         "popularity": 165.046,
         "origin_country": [
           "US"
@@ -284,6 +297,7 @@
           10759
         ],
         "name": "My Hero Academia",
+        "youtube": "https://www.youtube.com/embed/hk5ZLDFAFsc",
         "popularity": 163.307,
         "origin_country": [
           "JP"
@@ -305,6 +319,7 @@
           10759
         ],
         "name": "Black Clover",
+        "youtube": "https://www.youtube.com/embed/5kh7ClVck4Y",
         "popularity": 161.486,
         "origin_country": [
           "JP"
@@ -325,6 +340,7 @@
           35
         ],
         "name": "The Simpsons",
+        "youtube": "https://www.youtube.com/embed/OFfEnao9ao8",
         "popularity": 144.3,
         "origin_country": [
           "US"
@@ -336,7 +352,7 @@
         "id": 456,
         "vote_average": 7.1,
         "overview": "Set in Springfield, the average American town, the show focuses on the antics and everyday adventures of the Simpson family; Homer, Marge, Bart, Lisa and Maggie, as well as a virtual cast of thousands. Since the beginning, the series has been a pop culture icon, attracting hundreds of celebrities to guest star. The show has also made name for itself in its fearless satirical take on politics, media and American life in general.",
-        "poster_path": "https://cdn.europosters.eu/image/750/posters/the-simpsons-couch-cast-i26346.jpg"
+        "poster_path": "https://s.hdnux.com/photos/66/55/46/14342552/5/920x920.jpg"
       },
       {
         "original_name": "The Big Bang Theory",
@@ -344,6 +360,7 @@
           35
         ],
         "name": "The Big Bang Theory",
+        "youtube": "https://www.youtube.com/embed/BCL-dJLiMuI",
         "popularity": 144.266,
         "origin_country": [
           "US"
@@ -364,6 +381,7 @@
           9648
         ],
         "name": "Riverdale",
+        "youtube": "https://www.youtube.com/embed/5EkiZiS-5tc" ,
         "popularity": 143.997,
         "origin_country": [
           "US"
@@ -384,6 +402,7 @@
           10765
         ],
         "name": "Future Man",
+        "youtube": "https://www.youtube.com/embed/meAKAcYGLog",
         "popularity": 142.585,
         "origin_country": [
           "US"
@@ -405,6 +424,7 @@
           9648
         ],
         "name": "The Blacklist",
+        "youtube": "https://www.youtube.com/embed/XihA6GWIBdM",
         "popularity": 138.135,
         "origin_country": [
           "US"
