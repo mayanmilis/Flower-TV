@@ -46,7 +46,6 @@ class Navbar extends Component{
                         <div className='SideBarBtn'>
                             <ul>    
                                 <NavLink to='/signup'><button>Join</button></NavLink>
-                                <button>Free Month Trial</button>
                             </ul>   
                         </div>
                      </div>

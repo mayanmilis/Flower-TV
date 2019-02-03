@@ -62,7 +62,7 @@
 
 .SideBar{   
     width: 300px;
-    height: 420px;
+    height: 350px;
     background-image: linear-gradient(rgba(34, 34, 34, 0.89) 40%, black );
     right:0;
     margin-top: 55px;

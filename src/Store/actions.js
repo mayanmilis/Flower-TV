@@ -14,3 +14,11 @@ export const mountMovies = (list) =>{
         })
     }
 };
+export const newUser = (user) =>{ 
+    return(dispatch, gesState) =>{  
+        dispatch({ type: 'NEW_USER', user: user})
+        .catch((err) =>{
+            dispatch({ type: 'NEW_USER_ERROR', err})
+        })
+    }
+};

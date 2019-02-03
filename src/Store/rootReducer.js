@@ -1,6 +1,7 @@
 const initialState = {  
     movies:[],
-    shows:[]
+    shows:[],
+    users: []
 } 
 
 const rootReducer = (state = initialState, action) =>{    
@@ -20,6 +21,16 @@ const rootReducer = (state = initialState, action) =>{
         }
         case 'MOUNT_MOVIES_ERROR':
         console.log('mount_movies_error', action.err)
+        return state; 
+        case 'NEW_USER':
+        let users = state.users
+        users.push(action.user)
+        return{ 
+            ...state,
+            users: users
+        }
+        case 'NEW_USER_ERROR':
+        console.log('new_user_error', action.err)
         return state; 
         default:
         return state;

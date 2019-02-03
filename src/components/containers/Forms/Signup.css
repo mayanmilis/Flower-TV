@@ -8,6 +8,7 @@
 
 .Signup{   
     width: 80%; 
+    height: 700px;
     margin: auto;
     background-color: rgba(8, 8, 8, 0.986);
     padding-bottom: 0;
@@ -44,7 +45,7 @@
 
 .SignupForm{   
     width: 500px;
-    height: 490px;
+    height: 390px;
     padding-top:10px; 
     margin: auto;
     background-color: rgb(255, 255, 255);

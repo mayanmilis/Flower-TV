@@ -31,12 +31,11 @@ class Details extends Component{
                             </div>
                             <div>   
                             <p>{item.overview}</p>
-                            </div>
-                            <div className='WatchAnywhere'>   
-                            <NavLink to='/signup'><button>Join</button></NavLink>
-                          </div>     
+                            </div>   
                         </div>    
-  
+                        <div className='DetailsBtn'>   
+                            <NavLink to='/signup'><button>Join</button></NavLink>
+                          </div>  
                     </div>
 
                 </div>
