@@ -7,10 +7,23 @@ const ItemSchema = new Schema({
         type: String,
         required: true
     },
-    dare: { 
+    title: { 
+        type: String,
+        required: true
+    },
+    youtube: { 
+        type: String,
+        required: true
+    },
+    poster_path: { 
+        type: String,
+        required: true
+    },
+    date: { 
         type: Date,
         default: Date.now
     }
+
 });
 
 module.exports = Item = mongoose.model('item', ItemSchema)

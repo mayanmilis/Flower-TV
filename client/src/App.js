@@ -10,15 +10,28 @@ import Details from './components/containers/content/Details'
 import showsJson from './json files/Shows.json'
 import moviesJson from './json files/Movies.json'
 import {connect} from 'react-redux'
+import axios from 'axios'
 
 class App extends Component {
   state = { 
     isLoaded: false
   }
-  componentDidMount(){    
+  componentDidMount(){ 
+    this.fetchAllMoviesData();
+}
+  
+async fetchAllMoviesData (){
+    let moviesList = []; 
+    try { 
+      const movies = await axios.get('/api/items');
+      moviesList.push(movies.data[0])
+    }catch (err) {
+      this.setState({isLoaded: false});
+  }
+      
     let showsList = showsJson.results
     this.props.mountShows(showsList)
-    let moviesList = moviesJson.results
+    // let moviesList = moviesJson.results
     this.props.mountMovies(moviesList)
     this.setState({ 
       isLoaded: true
