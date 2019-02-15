@@ -5,20 +5,36 @@ const Schema = mongoose.Schema;
 const ItemSchema = new Schema({ 
     name: { 
         type: String,
-        required: true
+
     },
     title: { 
         type: String,
-        required: true
+
     },
     youtube: { 
         type: String,
-        required: true
+
     },
     poster_path: { 
         type: String,
-        required: true
+
     },
+    id:{    
+        type: Number,
+
+    },
+    vote_average: { 
+        type: Number,
+
+    },
+    overview:{  
+        type: String,
+
+    },
+    first_air_date:{    
+        type: String
+    },
+    
     date: { 
         type: Date,
         default: Date.now

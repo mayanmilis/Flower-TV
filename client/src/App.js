@@ -21,15 +21,41 @@ class App extends Component {
 }
   
 async fetchAllMoviesData (){
-    let moviesList = []; 
+
+  let showsArr = showsJson.results
+  for(let i=0; i<showsArr.length; i++){  
     try { 
-      const movies = await axios.get('/api/items');
-      moviesList.push(movies.data[0])
+      await axios.post('/api/shows', showsArr[i]);
     }catch (err) {
-      this.setState({isLoaded: false});
+      console.log('something went wrong')
   }
+  }
+  let moviesArr = moviesJson.results
+  for(let i=0; i<moviesArr.length; i++){  
+    try { 
+      await axios.post('/api/movies', moviesArr[i]);
+    }catch (err) {
+      console.log('something went wrong')
+  }
+  }
+  let moviesList = []; 
+  try { 
+    moviesList = await axios.get('/api/items');
+  }catch (err) {
+    this.setState({isLoaded: false});
+}
+moviesList = moviesList.data
+
+let showsList = []; 
+try { 
+  showsList = await axios.get('/api/items');
+}catch (err) {
+  this.setState({isLoaded: false});
+}
+showsList = showsList.data
+
       
-    let showsList = showsJson.results
+    // let showsList = showsJson.results
     this.props.mountShows(showsList)
     // let moviesList = moviesJson.results
     this.props.mountMovies(moviesList)

@@ -39,7 +39,7 @@ class Movies extends Component{
     }
 
 const mapStateToProps = (state)=>{  
-
+    console.log(state)
     return{ 
         movies: state.movies
     }
