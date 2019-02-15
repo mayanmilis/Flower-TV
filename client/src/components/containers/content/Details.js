@@ -9,7 +9,7 @@ class Details extends Component{
     render(){   
         let {item} = this.props
         let title = item.title ? item.title : item.name
-        let release = item.release_date ? item.release_date : item.first_air_date
+        let release = item.date ? item.date : null
         let youtube = item.youtube
         console.log(item)
         return( 

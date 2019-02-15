@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import './Signup.css'
 import {connect} from 'react-redux'
 import moment from 'moment'
+import axios from 'axios'
 
 
 class Signup extends Component{ 
@@ -20,6 +21,16 @@ class Signup extends Component{
         })
     }
 
+    async createNewUser(newUser){  
+        try { 
+           await axios.post('/api/users', newUser)
+           console.log(newUser)
+          }catch (err) {
+            console.log('something went wrong', err)
+        }
+        
+    }
+
     onSubmit= (event) =>{    
         let nameRegex = /\D\w+/
         let firstName = this.state.firstName
@@ -28,6 +39,8 @@ class Signup extends Component{
         lastName = lastName.match(nameRegex)[0]
         let phoneNumber = this.state.phoneNumber
         let email = this.state.email
+        let id = this.state.id
+        console.log(this.state)
         function strOrgenizer(str){    
             str = str.split(' ')
             for(let i = 0; i<str.length; i++){  
@@ -36,31 +49,32 @@ class Signup extends Component{
             return str.join(' ')
         }
     if(firstName&&lastName&&phoneNumber&&email !== ''){
+        // event.preventDefault()
         if(Number.isInteger(phoneNumber)){  
             return phoneNumber
         }else{  
             phoneNumber = ''
         }
-        event.preventDefault();
-        this.props.newUser({
+        let newUser = {
             firstName: strOrgenizer(firstName),
             lastName: strOrgenizer(lastName),
             phoneNumber: this.state.phoneNumber,
             email: this.state.email,
             date: this.state.date,
             id: this.state.id
-        })
-        let id = this.state.id+1
+        }
+        console.log(newUser)
+        this.createNewUser(newUser);
         this.setState({ 
             firstName: '',
             lastName: '',
             phoneNumber: '',
             email: '',
             date: '',
-            id: id
+            id: this.state.id+1
         })
+        console.log(this.state)
     }else{  
-        event.preventDefault();
         return null
     }
 

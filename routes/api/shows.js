@@ -2,14 +2,14 @@ const express = require('express');
 const router = express.Router();
 
 //Item Model
-const Item = require('../../models/item');
+const Show = require('../../models/Show');
 
 // @rout    GET api/items
 // @desc    GET All Items
 // @access  Public
 
 router.get('/', (req,res) =>{   
-    Item.find() 
+    Show.find() 
     .sort({date : -1})
     .then(items => res.json(items));
 });
@@ -19,7 +19,7 @@ router.get('/', (req,res) =>{
 // @access  Public
 
 router.post('/', (req,res) =>{   
-    const newItem = new Item({  
+    const newShow = new Show({  
         name: req.body.name,
         title: req.body.title,
         id: req.body.id,
@@ -29,7 +29,7 @@ router.post('/', (req,res) =>{
         poster_path: req.body.poster_path
     });
 
-    newItem.save().then(item => res.json(item));
+    newShow.save().then(item => res.json(item));
 
 });
 
@@ -38,7 +38,7 @@ router.post('/', (req,res) =>{
 // @access  Public
 
 router.delete('/:id', (req,res) =>{   
-    Item.findById(req.params.id)
+    Show.findById(req.params.id)
     .then(item => item.remove().then(() => res.json({success:true})))
     .catch(err => res.status(404).json({success: false}))
 });

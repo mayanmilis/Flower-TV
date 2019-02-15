@@ -32,6 +32,14 @@ const rootReducer = (state = initialState, action) =>{
         case 'NEW_USER_ERROR':
         console.log('new_user_error', action.err)
         return state; 
+        case 'MOUNT_USERS':
+        return{ 
+            ...state,
+            users: action.list
+        }
+        case 'MOUNT_USERS_ERROR':
+        console.log('mount_users_error', action.err)
+        return state; 
         default:
         return state;
     }

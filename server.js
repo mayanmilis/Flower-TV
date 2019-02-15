@@ -2,7 +2,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 
-const items = require('./routes/api/items');
+const users = require('./routes/api/users');
 const movies = require('./routes/api/movies');
 const shows = require('./routes/api/shows');
 
@@ -21,7 +21,7 @@ mongoose
     .catch(err => console.log(err));
 
 //Use Routes
-app.use('/api/items', items)
+app.use('/api/users', users)
 app.use('/api/movies', movies)
 app.use('/api/shows', shows)
 

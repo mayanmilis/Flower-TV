@@ -22,43 +22,53 @@ class App extends Component {
   
 async fetchAllMoviesData (){
 
-  let showsArr = showsJson.results
-  for(let i=0; i<showsArr.length; i++){  
-    try { 
-      await axios.post('/api/shows', showsArr[i]);
-    }catch (err) {
-      console.log('something went wrong')
-  }
-  }
-  let moviesArr = moviesJson.results
-  for(let i=0; i<moviesArr.length; i++){  
-    try { 
-      await axios.post('/api/movies', moviesArr[i]);
-    }catch (err) {
-      console.log('something went wrong')
-  }
-  }
+  // let showsArr = showsJson.results
+  // for(let i=0; i<showsArr.length; i++){  
+  //   try { 
+  //     await axios.post('/api/shows', showsArr[i]);
+  //   }catch (err) {
+  //     console.log('something went wrong')
+  // }
+  // }
+  // let moviesArr = moviesJson.results
+  // for(let i=0; i<moviesArr.length; i++){  
+  //   try { 
+  //     await axios.post('/api/movies', moviesArr[i]);
+  //   }catch (err) {
+  //     console.log('something went wrong')
+  // }
+  // }
   let moviesList = []; 
   try { 
-    moviesList = await axios.get('/api/items');
+    moviesList = await axios.get('/api/movies');
   }catch (err) {
     this.setState({isLoaded: false});
 }
+
 moviesList = moviesList.data
 
 let showsList = []; 
 try { 
-  showsList = await axios.get('/api/items');
+  showsList = await axios.get('/api/shows');
 }catch (err) {
   this.setState({isLoaded: false});
 }
 showsList = showsList.data
 
-      
+
+let usersList;
+try { 
+  usersList = await axios.get('/api/users');
+}catch (err) {
+  this.setState({isLoaded: false});
+}
+usersList = usersList.data
+
     // let showsList = showsJson.results
     this.props.mountShows(showsList)
     // let moviesList = moviesJson.results
     this.props.mountMovies(moviesList)
+    this.props.mountUsers(usersList)
     this.setState({ 
       isLoaded: true
     })
@@ -92,7 +102,8 @@ showsList = showsList.data
 const mapDispatchToProps = (dispatch)=>{    
   return{ 
       mountShows: (list) => dispatch({type: 'MOUNT_SHOWS', list:list}),
-      mountMovies: (list) => dispatch({type: 'MOUNT_MOVIES', list:list})
+      mountMovies: (list) => dispatch({type: 'MOUNT_MOVIES', list:list}),
+      mountUsers: (list) => dispatch({type: 'MOUNT_USERS', list:list})
   }
 }
 

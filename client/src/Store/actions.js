@@ -22,3 +22,11 @@ export const newUser = (user) =>{
         })
     }
 };
+export const mountUsers = (list) =>{ 
+    return(dispatch, gesState) =>{  
+        dispatch({ type: 'MOUNT_USERS', list: list})
+        .catch((err) =>{
+            dispatch({ type: 'MOUNT_USERS_ERROR', err})
+        })
+    }
+};
