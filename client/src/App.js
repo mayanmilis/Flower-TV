@@ -11,6 +11,7 @@ import showsJson from './json files/Shows.json'
 import moviesJson from './json files/Movies.json'
 import {connect} from 'react-redux'
 import axios from 'axios'
+import UsersList from './components/containers/content/UsersList'
 
 class App extends Component {
   state = { 
@@ -89,6 +90,7 @@ usersList = usersList.data
                 <Route path='/library' component={Library}/>
                 <Route path='/chooseplan' component={ChoosePlan}/>
                 <Route path='/watchanywhere' component={WatchAnywhere}/>
+                <Route path='/userslist' component={UsersList}/>
   
         </div>
         </BrowserRouter>
