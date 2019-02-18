@@ -7,7 +7,7 @@ import {NavLink} from 'react-router-dom'
 class Details extends Component{    
     
     render(){   
-        let {item} = this.props
+        let {item, goBack} = this.props
         let title = item.title ? item.title : item.name
         let release = item.date ? item.date : null
         let youtube = item.youtube
@@ -16,25 +16,27 @@ class Details extends Component{
                 <div className='DashboardContainer'>
                     <div className='Dashboard'> 
                         <div className='DetailsContainer'>
-                            <div>
+                        <div className='DetailsHeaderAndVideo'>   
+                        <div className='DetailsHeaderAndRate'>
                                 <div className='DetailsHeader'>   
                                     <h1>{title}</h1>   
                                     <h1>({release.slice(0,4)})</h1>
                                 </div>
                                 <h2>IMDB: {item.vote_average}</h2>
-                                <div className='DetailsImageContainer'>   
-                                    <div className='Image' style={{width: '300px', height: '300px', backgroundImage:`url(${item.poster_path})`}}></div>
-                                    <div className='YouTube' ><iframe width="532" height="300" src={youtube} frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe></div>
-                                </div>
                             </div> 
-                            <div>   
+                            <div className='Youtube' >
+                                 <iframe width="600" height="350" src={youtube} frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                            </div> 
+                        </div>
+                            <div  className='DetailsSummary'>   
+                                <h2>Summary</h2>
                             </div>
-                            <div>   
-                            <p>{item.overview}</p>
+                            <div className='DetailsDescription'>
+                                <p>{item.overview}</p>
                             </div>   
                         </div>    
                         <div className='DetailsBtn'>   
-                            <NavLink to='/signup'><button>Join</button></NavLink>
+                            <button onClick={goBack}>Back</button>
                           </div>  
                     </div>
 
@@ -50,6 +52,7 @@ const mapStateToProps = (state, ownProps)=>{
     const id = ownProps.match.params.id
     const movies = state.movies
     const shows = state.shows
+    const goBack = ownProps.history.goBack
     let item
     for(let i =0; i<movies.length; i++){    
         if (movies[i].id===Number(id)){   
@@ -67,7 +70,8 @@ const mapStateToProps = (state, ownProps)=>{
     
 // console.log(id, movies[0].id, item.id)
     return{ 
-        item: item
+        item: item,
+        goBack: goBack
     }
 }
 

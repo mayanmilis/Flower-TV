@@ -29,11 +29,14 @@ class Navbar extends Component{
                             <ul>   
                             <li><NavLink to='/'>Flower TV</NavLink></li>
                             <li><Link to='/userslist'>Users List</Link></li>
-                                <div className='Burger' onClick={this.handleSidebar}>
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                </div>  
+                            <div className='BurgerContainer' onClick={this.handleSidebar}>   
+                                <div className='Burger' >
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                    </div>  
+                            </div>
+
                             </ul>
                         </nav>
                         </div>

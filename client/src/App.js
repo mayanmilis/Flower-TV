@@ -12,6 +12,7 @@ import moviesJson from './json files/Movies.json'
 import {connect} from 'react-redux'
 import axios from 'axios'
 import UsersList from './components/containers/content/UsersList'
+import Login from './components/containers/content/Login'
 
 class App extends Component {
   state = { 
@@ -39,6 +40,18 @@ async fetchAllMoviesData (){
   //     console.log('something went wrong')
   // }
   // }
+// let admin = { 
+//   "email": "mayanmilis@gmail.com",
+//   "password": "123456"
+// }
+
+//     try { 
+//       await axios.post('/api/admin', admin);
+//     }catch (err) {
+//       console.log('something went wrong')
+//   }
+
+
   let moviesList = []; 
   try { 
     moviesList = await axios.get('/api/movies');
@@ -56,20 +69,10 @@ try {
 }
 showsList = showsList.data
 
-
-let usersList;
-try { 
-  usersList = await axios.get('/api/users');
-}catch (err) {
-  this.setState({isLoaded: false});
-}
-usersList = usersList.data
-
     // let showsList = showsJson.results
     this.props.mountShows(showsList)
     // let moviesList = moviesJson.results
     this.props.mountMovies(moviesList)
-    this.props.mountUsers(usersList)
     this.setState({ 
       isLoaded: true
     })
@@ -104,8 +107,7 @@ usersList = usersList.data
 const mapDispatchToProps = (dispatch)=>{    
   return{ 
       mountShows: (list) => dispatch({type: 'MOUNT_SHOWS', list:list}),
-      mountMovies: (list) => dispatch({type: 'MOUNT_MOVIES', list:list}),
-      mountUsers: (list) => dispatch({type: 'MOUNT_USERS', list:list})
+      mountMovies: (list) => dispatch({type: 'MOUNT_MOVIES', list:list})
   }
 }
 

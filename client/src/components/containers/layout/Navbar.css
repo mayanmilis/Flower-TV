@@ -28,9 +28,12 @@
 
 .Navbar li a{
     float: left;
-    font-size: 19px;
+    font-size: 20px;
     font-weight: 700;
-    padding: 16.5px 20px;
+    padding-left: 16.5px;
+    padding-right: 16.5px;
+    padding-top:20px;
+    padding-bottom:20px;
     color: white;
     text-align: center;
     display: block;
@@ -41,23 +44,30 @@
 .Navbar li a:hover{
     background-color:black;
 }
-
-.Burger{
-    float: right;
-    width: 30px;
-    padding:13px 20px;
-    cursor: pointer;
+.Burger{    
+    width: 40px;
 }
-.Burger:hover{
+
+.BurgerContainer{
+    float: right;
+    width: 60px;
+    height: 60px;
+    margin: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgb(34, 34, 34);
+}
+.BurgerContainer:hover{
     background-color:black;
+    border: 2px solid black;
 }
 
 .Burger div{
-    height: 3px;
-    width: 90%;
+    height: 5px;
     background-color:white;
     margin: 5px;
-
 }
 
 .SideBar{   
@@ -65,11 +75,11 @@
     height: 350px;
     background-image: linear-gradient(rgba(34, 34, 34, 0.89) 40%, black );
     right:0;
-    margin-top: 55px;
+    margin-top: 60px;
     transition-duration: 200ms;
     position: fixed;
     border-radius: 2px;
-    border: 1px solid black;
+
 }
 
 .SideBar ul{    

@@ -63,10 +63,11 @@ class Signup extends Component{
             date: this.state.date,
             id: this.state.id+1
         }
-        console.log(newUser, this.props)
+        console.log(this.props.users)
         this.createNewUser(newUser);
+        console.log(this.props.users)
         let props = this.props
-        setTimeout(function(){ props.history.push('/') }, 3000);
+        setTimeout(function(){ props.history.push('/') }, 4000);
         this.setState({ 
             firstName: '',
             lastName: '',
@@ -76,6 +77,7 @@ class Signup extends Component{
             id: this.state.id+1,
             displayModal:true            
         })
+
         console.log(this.state)
     }else{  
         return null
