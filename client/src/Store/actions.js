@@ -1,56 +1,47 @@
 import axios from 'axios'
 
-export const mountShows = (list) =>{ 
-    return(dispatch, gesState) =>{  
-        dispatch({ type: 'MOUNT_SHOWS', list: list})
-        // .catch((err) =>{
-        //     dispatch({ type: 'MOUNT_SHOWS_ERROR', err})
-        // })
+export const mountShows = () =>{ 
+        return(dispatch, gesState) =>{  
+            let showsList
+            async function fetchAllMoviesData (){
+                let shows
+                try { 
+                shows = await axios.get('/api/shows');
+                shows = shows.data
+                }catch (err) {
+                  console.log('Something went wrong', err);
+              }
+              showsList = shows
+              }
+              fetchAllMoviesData().then(() =>{  
+                dispatch({ type: 'MOUNT_SHOWS', list: showsList})
+              }).catch((err) =>{
+                dispatch({ type: 'MOUNT_SHOWS_ERROR', err})
+            })
     }
 };
+
 export const mountMovies = () =>{ 
     return(dispatch, gesState) =>{  
-        let moviesList=[{title:"yona"}]
+        let moviesList
         async function fetchAllMoviesData (){
             let movies
             try { 
             movies = await axios.get('/api/movies');
+            movies = movies.data
             }catch (err) {
               console.log('Something went wrong', err);
           }
-          console.log(movies.data) 
-          moviesList = movies.data
+          moviesList = movies
           }
-          fetchAllMoviesData()
-          console.log(moviesList)
-        console.log(moviesList)
-        dispatch({ type: 'MOUNT_MOVIES', list: moviesList})
-        // .catch((err) =>{
-        //     dispatch({ type: 'MOUNT_MOVIES_ERROR', err});
-        // })
+          fetchAllMoviesData().then(() =>{  
+            dispatch({ type: 'MOUNT_MOVIES', list: moviesList})
+          }).catch((err) =>{
+            dispatch({ type: 'MOUNT_MOVIES_ERROR', err});
+        })
     }
 };
-// export const dada = async function fetchAllMoviesData(){
-//     let moviesList = []; 
-//     try { 
-//       moviesList = await axios.get('/api/movies');
-//     }catch (err) {
-//       console.log('Something went wrong', err);
-//   }
-//   return moviesList = moviesList.data
-//   }
 
-// export const mountMovies = (list) =>{ 
-//     return(dispatch, gesState) =>{  
-//         console.log('yonaaaaaaaaaa').then(()=> {  
-//             dispatch({ type: 'MOUNT_MOVIES', list: list})
-//             .catch((err) =>{
-//                 dispatch({ type: 'MOUNT_MOVIES_ERROR', err})
-//             })
-//         })
-
-//     }
-// };
 export const newUser = (user) =>{ 
     return(dispatch, gesState) =>{  
         dispatch({ type: 'NEW_USER', user: user})
@@ -59,11 +50,24 @@ export const newUser = (user) =>{
         })
     }
 };
-export const mountUsers = (list) =>{ 
+
+export const mountUsers = () =>{ 
     return(dispatch, gesState) =>{  
-        dispatch({ type: 'MOUNT_USERS', list: list})
-        .catch((err) =>{
-            dispatch({ type: 'MOUNT_USERS_ERROR', err})
-        })
+        let usersList;
+        async function mountUsers (){
+            let users;
+            try { 
+              users = await axios.get('/api/users');
+              users = users.data
+            }catch (err) {
+                console.log('Something went wrong', err);
+            }
+            usersList = users
+            }
+            mountUsers().then(() =>{    
+                dispatch({ type: 'MOUNT_USERS', list: usersList})
+            }).catch((err) =>{
+                dispatch({ type: 'MOUNT_USERS_ERROR', err})
+            })
     }
 };

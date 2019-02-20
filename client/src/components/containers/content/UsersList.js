@@ -3,29 +3,20 @@ import {connect} from 'react-redux'
 import moment from 'moment'
 import axios from 'axios'
 import Login from './Login'
+import {mountUsers} from '../../../Store/actions'
 
 class UsersList extends Component{  
     state = {   
         displayLogin: true
     }
     componentDidMount(){ 
-        this.fetchUsers();
+        this.props.mountUsers()
+        this.setState({ 
+            isLoaded: true
+          })
     }
       
-    async fetchUsers (){
-    let usersList;
-    try { 
-      usersList = await axios.get('/api/users');
-    }catch (err) {
-      this.setState({isLoaded: false});
-    }
-    usersList = usersList.data
-    
-        this.props.mountUsers(usersList)
-        this.setState({ 
-          isLoaded: true
-        })
-    }
+
 
     displayLoginHandler = (display) =>{ 
         if(display){   
@@ -89,7 +80,7 @@ class UsersList extends Component{
 }
 const mapDispatchToProps = (dispatch)=>{    
     return{ 
-        mountUsers: (list) => dispatch({type: 'MOUNT_USERS', list:list})
+        mountUsers: () => dispatch(mountUsers())
     }
   }
 

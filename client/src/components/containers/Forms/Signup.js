@@ -3,6 +3,7 @@ import './Signup.css'
 import {connect} from 'react-redux'
 import moment from 'moment'
 import axios from 'axios'
+import {newUser} from '../../../Store/actions'
 
 
 class Signup extends Component{ 
@@ -64,13 +65,7 @@ class Signup extends Component{
 
             }
          }
-  
          console.log(newUser)
-         
-         
-
-
-        
     }
 
     onSubmit= (event) =>{    
@@ -174,7 +169,7 @@ class Signup extends Component{
 
 const mapDispatchToProps = (dispatch) =>{    
     return{ 
-        newUser: (user) => dispatch({type: 'NEW_USER', user: user})
+        newUser: (user) => dispatch(newUser(user))
     }
 }
 
