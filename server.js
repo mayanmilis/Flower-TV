@@ -2,10 +2,12 @@ const express = require('express')
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 
+
 const users = require('./routes/api/users');
 const movies = require('./routes/api/movies');
 const shows = require('./routes/api/shows');
 const admin = require('./routes/api/admin');
+const mail = require('./routes/api/mail');
 
 const app = express();
 
@@ -26,6 +28,7 @@ app.use('/api/users', users)
 app.use('/api/movies', movies)
 app.use('/api/shows', shows)
 app.use('/api/admin', admin)
+app.use('/api/mail', mail)
 
     const port = process.env.PORT || 5000;
 

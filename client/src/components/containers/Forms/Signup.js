@@ -12,7 +12,6 @@ class Signup extends Component{
         phoneNumber: '',
         email: '',
         date: moment(new Date()).format('MMMM Do YYYY, h:mm:ss a'),
-        id: 0,
         displayModal:''
     }
 
@@ -23,12 +22,54 @@ class Signup extends Component{
     }
 
     async createNewUser(newUser){  
+        let usersList;
         try { 
-           await axios.post('/api/users', newUser)
-           console.log(newUser)
-          }catch (err) {
-            console.log('something went wrong', err)
-        }
+            let list = await axios.get('/api/users')
+            usersList = list
+           }catch (err) {
+             console.log('something went wrong', err)
+         }
+         usersList = usersList.data
+         if(usersList.length === 0){    
+            try { 
+                await axios.post('/api/users', newUser)
+                console.log(newUser)
+               }catch (err) {
+                 console.log('something went wrong', err)
+             }
+             try { 
+                await axios.post('/api/mail', newUser)
+                console.log(newUser)
+               }catch (err) {
+                 console.log('something went wrong', err)
+             }
+         }else{  
+             for(let i=0; i<usersList.length; i++){ 
+                if(newUser.email===usersList[i].email||newUser.phoneNumber===usersList[i].phoneNumber){  
+                   return alert('Your details is alreay in our system')
+                }else{ 
+                   try { 
+                       await axios.post('/api/users', newUser)
+                       console.log(newUser)
+                      }catch (err) {
+                        console.log('something went wrong', err)
+                    }
+                    try { 
+                        await axios.post('/api/mail', newUser)
+                        console.log(newUser)
+                       }catch (err) {
+                         console.log('something went wrong', err)
+                     }
+                }
+
+            }
+         }
+  
+         console.log(newUser)
+         
+         
+
+
         
     }
 
@@ -67,7 +108,7 @@ class Signup extends Component{
         this.createNewUser(newUser);
         console.log(this.props.users)
         let props = this.props
-        setTimeout(function(){ props.history.push('/') }, 4000);
+        setTimeout(function(){ props.history.push('/') }, 3000);
         this.setState({ 
             firstName: '',
             lastName: '',

@@ -13,6 +13,7 @@ import {connect} from 'react-redux'
 import axios from 'axios'
 import UsersList from './components/containers/content/UsersList'
 import Login from './components/containers/content/Login'
+import {mountMovies,mountShows} from './Store/actions'
 
 class App extends Component {
   state = { 
@@ -52,27 +53,32 @@ async fetchAllMoviesData (){
 //   }
 
 
-  let moviesList = []; 
-  try { 
-    moviesList = await axios.get('/api/movies');
-  }catch (err) {
-    this.setState({isLoaded: false});
-}
+//   let moviesList = []; 
+//   try { 
+//     moviesList = await axios.get('/api/movies');
+//   }catch (err) {
+//     console.log('Something went wrong', err);
+// }
 
-moviesList = moviesList.data
+// moviesList = moviesList.data
 
 let showsList = []; 
 try { 
   showsList = await axios.get('/api/shows');
 }catch (err) {
-  this.setState({isLoaded: false});
+  console.log('Something went wrong', err);
 }
 showsList = showsList.data
 
-    // let showsList = showsJson.results
+//     // let showsList = showsJson.results
     this.props.mountShows(showsList)
-    // let moviesList = moviesJson.results
-    this.props.mountMovies(moviesList)
+//     // let moviesList = moviesJson.results
+    this.props.mountMovies()
+//     this.setState({ 
+//       isLoaded: true
+//     })
+
+// this.props.mountMovies()
     this.setState({ 
       isLoaded: true
     })
@@ -106,8 +112,8 @@ showsList = showsList.data
 
 const mapDispatchToProps = (dispatch)=>{    
   return{ 
-      mountShows: (list) => dispatch({type: 'MOUNT_SHOWS', list:list}),
-      mountMovies: (list) => dispatch({type: 'MOUNT_MOVIES', list:list})
+      mountShows: (list) => dispatch(mountShows(list)),
+      mountMovies: () => dispatch(mountMovies())
   }
 }
 
