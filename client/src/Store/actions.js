@@ -56,6 +56,7 @@ export const createNewUser = (newUser) =>{
                }catch (err) {
                  console.log('something went wrong', err)
              }
+             console.log(usersList)
              if(usersList.length === 0){    
                 try { 
                     await axios.post('/api/users', newUser)
@@ -70,7 +71,7 @@ export const createNewUser = (newUser) =>{
              }else{  
                  for(let i=0; i<usersList.length; i++){ 
                     if(newUser.email===usersList[i].email||newUser.phoneNumber===usersList[i].phoneNumber){  
-                       return alert('Your details is alreay in our system')
+                       return alert('Your Details Are Alreay In Our System')
                     }else{ 
                        try { 
                            await axios.post('/api/users', newUser)
