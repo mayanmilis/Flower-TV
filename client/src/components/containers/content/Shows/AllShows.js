@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
 import Show from './Show'
 import {Link} from 'react-router-dom'
-import Json from '../../../../json files/Shows.json'
 import './Show.css'
 import {connect} from 'react-redux'
 

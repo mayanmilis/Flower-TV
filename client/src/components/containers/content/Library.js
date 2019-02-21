@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React from 'react'
 import AllMovies from './Movies/AllMovies'
 import AllShows from './Shows/AllShows'
 import '../dashboard/dashboard.css'

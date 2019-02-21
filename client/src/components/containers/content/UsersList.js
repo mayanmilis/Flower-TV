@@ -1,7 +1,6 @@
 import React,{Component} from 'react'
 import {connect} from 'react-redux'
 import moment from 'moment'
-import axios from 'axios'
 import Login from './Login'
 import {mountUsers} from '../../../Store/actions'
 

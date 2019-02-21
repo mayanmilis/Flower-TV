@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import {connect} from 'react-redux'
 import './Details.css'
 import '../layout/SideBar/Sidebar.css'
-import {NavLink} from 'react-router-dom'
 
 class Details extends Component{    
     
@@ -45,8 +44,6 @@ class Details extends Component{
     }
 }
 
-
-
 const mapStateToProps = (state, ownProps)=>{  
     console.log(state, ownProps)
     const id = ownProps.match.params.id
@@ -67,7 +64,6 @@ const mapStateToProps = (state, ownProps)=>{
         }
     }
 
-    
 // console.log(id, movies[0].id, item.id)
     return{ 
         item: item,

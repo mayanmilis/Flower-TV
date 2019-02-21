@@ -2,7 +2,6 @@ import React, {Component} from 'react'
 import './Signup.css'
 import {connect} from 'react-redux'
 import moment from 'moment'
-import axios from 'axios'
 import {createNewUser} from '../../../Store/actions'
 
 class Signup extends Component{ 
