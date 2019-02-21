@@ -27,6 +27,7 @@ class Navbar extends Component{
                         <nav>   
                             <ul>   
                             <li><NavLink to='/'>Flower TV</NavLink></li>
+                            <li style={{display:'none'}}><NavLink to='/userslist'>Users List</NavLink></li>
                             <div className='BurgerContainer' onClick={this.handleSidebar}>   
                                 <div className='Burger' >
                                         <div></div>
