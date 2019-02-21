@@ -34,7 +34,7 @@ router.post('/', (req,res) =>{
                     <li>Email: ${req.body.email}</li>
                 </ul>
                 <p>To see all users requests:</p>
-                <a href="http://localhost:3000/userslist">click here</a>
+                <a href="https://flower-tv.herokuapp.com/userslist">click here</a>
           `
         };
       
