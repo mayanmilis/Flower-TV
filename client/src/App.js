@@ -10,7 +10,7 @@ import Details from './components/containers/content/Details'
 // import showsJson from './json files/Shows.json'
 // import moviesJson from './json files/Movies.json'
 import {connect} from 'react-redux'
-// import axios from 'axios'
+import axios from 'axios'
 import UsersList from './components/containers/content/UsersList'
 // import Login from './components/containers/content/Login'
 import {mountMovies,mountShows} from './Store/actions'
@@ -42,7 +42,7 @@ async fetchAllMoviesData (){
   // }
   // }
 // let admin = { 
-//   "email": "mayanmilis@gmail.com",
+//   "email": "flowertv.tests@gmail.com",
 //   "password": "123456"
 // }
 
