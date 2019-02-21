@@ -1,6 +1,6 @@
 import React, { Component} from 'react'
 import  './Navbar.css'
-import {NavLink, Link} from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
 
 class Navbar extends Component{ 
     state = {   
@@ -14,7 +14,6 @@ class Navbar extends Component{
         })
     }
     
-
     render(){
         let sidebarPosition;
         if(this.state.sidebarDisplay === false){    
@@ -28,7 +27,6 @@ class Navbar extends Component{
                         <nav>   
                             <ul>   
                             <li><NavLink to='/'>Flower TV</NavLink></li>
-                            <li><Link to='/userslist'>Users List</Link></li>
                             <div className='BurgerContainer' onClick={this.handleSidebar}>   
                                 <div className='Burger' >
                                         <div></div>
@@ -54,11 +52,8 @@ class Navbar extends Component{
                         </div>
                      </div>
             </div>
-    
-    
         )
     }
 }  
     
-
 export default Navbar

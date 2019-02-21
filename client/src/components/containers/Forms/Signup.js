@@ -3,8 +3,7 @@ import './Signup.css'
 import {connect} from 'react-redux'
 import moment from 'moment'
 import axios from 'axios'
-import {newUser} from '../../../Store/actions'
-
+import {createNewUser} from '../../../Store/actions'
 
 class Signup extends Component{ 
     state = {   
@@ -20,52 +19,6 @@ class Signup extends Component{
         this.setState({ 
             [event.target.id]: event.target.value
         })
-    }
-
-    async createNewUser(newUser){  
-        let usersList;
-        try { 
-            let list = await axios.get('/api/users')
-            usersList = list
-           }catch (err) {
-             console.log('something went wrong', err)
-         }
-         usersList = usersList.data
-         if(usersList.length === 0){    
-            try { 
-                await axios.post('/api/users', newUser)
-                console.log(newUser)
-               }catch (err) {
-                 console.log('something went wrong', err)
-             }
-             try { 
-                await axios.post('/api/mail', newUser)
-                console.log(newUser)
-               }catch (err) {
-                 console.log('something went wrong', err)
-             }
-         }else{  
-             for(let i=0; i<usersList.length; i++){ 
-                if(newUser.email===usersList[i].email||newUser.phoneNumber===usersList[i].phoneNumber){  
-                   return alert('Your details is alreay in our system')
-                }else{ 
-                   try { 
-                       await axios.post('/api/users', newUser)
-                       console.log(newUser)
-                      }catch (err) {
-                        console.log('something went wrong', err)
-                    }
-                    try { 
-                        await axios.post('/api/mail', newUser)
-                        console.log(newUser)
-                       }catch (err) {
-                         console.log('something went wrong', err)
-                     }
-                }
-
-            }
-         }
-         console.log(newUser)
     }
 
     onSubmit= (event) =>{    
@@ -97,10 +50,9 @@ class Signup extends Component{
             phoneNumber: this.state.phoneNumber,
             email: this.state.email,
             date: this.state.date,
-            id: this.state.id+1
         }
         console.log(this.props.users)
-        this.createNewUser(newUser);
+        this.props.createNewUser(newUser);
         console.log(this.props.users)
         let props = this.props
         setTimeout(function(){ props.history.push('/') }, 3000);
@@ -110,17 +62,14 @@ class Signup extends Component{
             phoneNumber: '',
             email: '',
             date: '',
-            id: this.state.id+1,
             displayModal:true            
         })
 
         console.log(this.state)
-    }else{  
+     }else{  
         return null
-    }
-
+        }   
     }    
-
 
     render(){   
         let modal='none'
@@ -169,15 +118,10 @@ class Signup extends Component{
 
 const mapDispatchToProps = (dispatch) =>{    
     return{ 
-        newUser: (user) => dispatch(newUser(user))
+        createNewUser: (newUser) => dispatch(createNewUser(newUser))
     }
 }
 
-const mapStateToProps = (state, ownProps) =>{   
-    console.log(state) 
-    return{ 
-        users: state.users
-    }
-}
 
-export default connect(mapStateToProps,mapDispatchToProps)(Signup)
+
+export default connect(null,mapDispatchToProps)(Signup)

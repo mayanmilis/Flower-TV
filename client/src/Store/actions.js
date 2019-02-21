@@ -42,10 +42,53 @@ export const mountMovies = () =>{
     }
 };
 
-export const newUser = (user) =>{ 
+export const createNewUser = (newUser) =>{ 
+    let user = newUser
     return(dispatch, gesState) =>{  
-        dispatch({ type: 'NEW_USER', user: user})
-        .catch((err) =>{
+
+        async function newUser(){  
+            let newUser = user
+            let usersList;
+            try { 
+                let list = await axios.get('/api/users')
+                usersList = list
+                usersList = usersList.data
+               }catch (err) {
+                 console.log('something went wrong', err)
+             }
+             if(usersList.length === 0){    
+                try { 
+                    await axios.post('/api/users', newUser)
+                   }catch (err) {
+                     console.log('something went wrong', err)
+                 }
+                 try { 
+                    await axios.post('/api/mail', newUser)
+                   }catch (err) {
+                     console.log('something went wrong', err)
+                 }
+             }else{  
+                 for(let i=0; i<usersList.length; i++){ 
+                    if(newUser.email===usersList[i].email||newUser.phoneNumber===usersList[i].phoneNumber){  
+                       return alert('Your details is alreay in our system')
+                    }else{ 
+                       try { 
+                           await axios.post('/api/users', newUser)
+                          }catch (err) {
+                            console.log('something went wrong', err)
+                        }
+                        try { 
+                            await axios.post('/api/mail', newUser)
+                           }catch (err) {
+                             console.log('something went wrong', err)
+                         }
+                    }
+                }
+             }
+        }
+        newUser().then(() =>{   
+            dispatch({ type: 'NEW_USER', user: newUser})
+        }).catch((err) =>{
             dispatch({ type: 'NEW_USER_ERROR', err})
         })
     }
